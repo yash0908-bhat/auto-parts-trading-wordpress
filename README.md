@@ -1,4 +1,4 @@
-# Auto Parts Trading — WordPress Website
+# Auto Parts Trading | WordPress Website
 
 A custom WordPress/Gutenberg front-end project for **Auto Parts Trading**, a UK automotive-parts business.
 
