@@ -1,0 +1,2081 @@
+<!-- wp:html -->
+<style>
+/* =========================================================
+   AUTO PARTS TRADING — COMPLETE HOMEPAGE
+   Scope: .apt-homepage only
+   Header/footer remain separate WordPress template parts
+   ========================================================= */
+
+.apt-homepage,
+.apt-homepage * {
+    box-sizing: border-box;
+}
+
+.apt-homepage {
+    --apt-red: #e10600;
+    --apt-red-dark: #b90400;
+    --apt-dark: #171c21;
+    --apt-dark-2: #222a30;
+    --apt-text: #4c555c;
+    --apt-muted: #717980;
+    --apt-line: #e3e6e8;
+    --apt-soft: #f5f6f7;
+    --apt-yellow: #ffd400;
+    --apt-blue: #16499b;
+
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0 0 0 calc(50% - 50vw) !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+
+    background: #fff;
+    color: var(--apt-dark);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.apt-homepage h1,
+.apt-homepage h2,
+.apt-homepage h3,
+.apt-homepage p,
+.apt-homepage form,
+.apt-homepage figure {
+    margin-top: 0;
+}
+
+.apt-homepage img {
+    display: block;
+    max-width: 100%;
+}
+
+.apt-homepage a {
+    text-decoration: none;
+}
+
+.apt-wrap {
+    width: min(1320px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.apt-section {
+    padding: 78px 0;
+}
+
+.apt-section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 12px;
+
+    color: var(--apt-red);
+
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+}
+
+.apt-section-kicker::before {
+    content: "";
+    width: 26px;
+    height: 3px;
+    border-radius: 99px;
+    background: var(--apt-red);
+}
+
+.apt-section-title {
+    margin-bottom: 12px;
+
+    color: var(--apt-dark);
+
+    font-size: clamp(30px, 3vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -1.2px;
+    font-weight: 900;
+}
+
+.apt-section-intro {
+    max-width: 720px;
+    margin-bottom: 34px;
+
+    color: var(--apt-text);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.apt-button {
+    min-height: 50px;
+    padding: 0 24px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 2px solid transparent;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .25px;
+
+    transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+
+.apt-button:hover {
+    transform: translateY(-1px);
+}
+
+.apt-button-red {
+    background: var(--apt-red);
+    border-color: var(--apt-red);
+    color: #fff !important;
+}
+
+.apt-button-red:hover {
+    background: var(--apt-red-dark);
+    border-color: var(--apt-red-dark);
+}
+
+.apt-button-dark {
+    background: var(--apt-dark);
+    border-color: var(--apt-dark);
+    color: #fff !important;
+}
+
+.apt-button-outline {
+    background: transparent;
+    border-color: var(--apt-dark);
+    color: var(--apt-dark) !important;
+}
+
+.apt-button-outline:hover {
+    background: var(--apt-dark);
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   1. HERO
+   ========================================================= */
+
+.apt-hero {
+    position: relative;
+    isolation: isolate;
+
+    min-height: 560px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg,
+            rgba(13,18,22,.96) 0%,
+            rgba(13,18,22,.91) 40%,
+            rgba(13,18,22,.66) 64%,
+            rgba(13,18,22,.20) 100%
+        ),
+        url("https://images.unsplash.com/photo-1551522435-a13afa10f103?fit=crop&w=1800&q=88")
+        center/cover no-repeat;
+}
+
+.apt-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(circle at 74% 55%, rgba(225,6,0,.16), transparent 25%);
+}
+
+.apt-hero-inner {
+    width: min(1320px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 70px 0;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.12fr) minmax(360px, .72fr);
+    gap: 64px;
+    align-items: center;
+}
+
+.apt-hero-copy {
+    max-width: 710px;
+}
+
+.apt-hero-badge {
+    width: fit-content;
+    margin-bottom: 18px;
+    padding: 8px 12px;
+
+    border-left: 4px solid var(--apt-red);
+    background: rgba(255,255,255,.10);
+    backdrop-filter: blur(6px);
+
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.35px;
+    text-transform: uppercase;
+}
+
+.apt-hero h1 {
+    margin-bottom: 18px;
+
+    color: #fff;
+
+    font-size: clamp(43px, 5vw, 70px);
+    line-height: .98;
+    letter-spacing: -2.3px;
+    font-weight: 900;
+}
+
+.apt-hero h1 span {
+    color: #ff1a14;
+}
+
+.apt-hero-lead {
+    max-width: 650px;
+    margin-bottom: 28px;
+
+    color: rgba(255,255,255,.83);
+
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+.apt-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-bottom: 28px;
+}
+
+.apt-hero .apt-button-outline {
+    border-color: rgba(255,255,255,.72);
+    color: #fff !important;
+}
+
+.apt-hero .apt-button-outline:hover {
+    background: #fff;
+    border-color: #fff;
+    color: var(--apt-dark) !important;
+}
+
+.apt-hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+.apt-hero-point {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: rgba(255,255,255,.82);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.apt-hero-point svg {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+
+    color: #ff2720;
+}
+
+
+/* HERO ENQUIRY CARD */
+
+.apt-hero-card {
+    padding: 27px;
+
+    border-top: 4px solid var(--apt-red);
+    border-radius: 8px;
+
+    background: rgba(255,255,255,.97);
+    box-shadow: 0 22px 60px rgba(0,0,0,.28);
+}
+
+.apt-hero-card h2 {
+    margin-bottom: 6px;
+
+    color: var(--apt-dark);
+
+    font-size: 24px;
+    line-height: 1.15;
+    font-weight: 900;
+}
+
+.apt-hero-card-sub {
+    margin-bottom: 20px;
+
+    color: var(--apt-muted);
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.apt-label {
+    display: block;
+    margin-bottom: 6px;
+
+    color: var(--apt-dark);
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .35px;
+    text-transform: uppercase;
+}
+
+.apt-hero-reg {
+    height: 50px;
+    margin-bottom: 12px;
+
+    display: grid;
+    grid-template-columns: 40px 1fr;
+
+    overflow: hidden;
+
+    border: 1px solid #c9ced2;
+    border-radius: 5px;
+}
+
+.apt-hero-reg-prefix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--apt-blue);
+    color: #fff;
+
+    font-size: 8px;
+    font-weight: 900;
+    line-height: 1.05;
+}
+
+.apt-hero-reg-input {
+    min-width: 0;
+    padding: 0 14px;
+
+    border: 0;
+    outline: 0;
+
+    background: var(--apt-yellow);
+    color: #111;
+
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
+
+.apt-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+.apt-field,
+.apt-select {
+    width: 100%;
+    height: 46px;
+    padding: 0 12px;
+
+    border: 1px solid #d3d7da;
+    border-radius: 5px;
+    outline: 0;
+
+    background: #fff;
+    color: #31383d;
+
+    font-size: 13px;
+}
+
+.apt-hero-find {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 2px;
+
+    border: 0;
+    border-radius: 5px;
+
+    background: var(--apt-red);
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .35px;
+
+    cursor: pointer;
+}
+
+.apt-hero-find:hover {
+    background: var(--apt-red-dark);
+}
+
+.apt-form-note {
+    margin-top: 10px !important;
+
+    color: #777f85;
+    font-size: 10px;
+    line-height: 1.45;
+    text-align: center;
+}
+
+
+/* =========================================================
+   2. QUICK CATEGORY STRIP
+   ========================================================= */
+
+.apt-category-section {
+    background: #fff;
+}
+
+.apt-category-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+.apt-category-head .apt-section-intro {
+    margin-bottom: 0;
+}
+
+.apt-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.apt-category-card {
+    position: relative;
+    min-height: 260px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+
+    border-radius: 8px;
+
+    background: #222;
+    box-shadow: 0 8px 28px rgba(0,0,0,.08);
+
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.apt-category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(0,0,0,.13);
+}
+
+.apt-category-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(180deg, rgba(10,14,17,.05) 10%, rgba(10,14,17,.85) 100%);
+}
+
+.apt-category-card img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform .35s ease;
+}
+
+.apt-category-card:hover img {
+    transform: scale(1.04);
+}
+
+.apt-category-card-body {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    padding: 24px;
+}
+
+.apt-category-card h3 {
+    margin-bottom: 7px;
+
+    color: #fff;
+
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.apt-category-card p {
+    margin-bottom: 0;
+
+    color: rgba(255,255,255,.76);
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.apt-category-link {
+    margin-top: 14px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #fff !important;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.apt-category-link span {
+    color: #ff211b;
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+/* SMALL CATEGORIES */
+
+.apt-mini-categories {
+    margin-top: 18px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.apt-mini-category {
+    min-height: 92px;
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    border: 1px solid var(--apt-line);
+    border-radius: 7px;
+
+    background: #fff;
+    color: var(--apt-dark) !important;
+
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+
+.apt-mini-category:hover {
+    border-color: #c5c9cc;
+    box-shadow: 0 7px 22px rgba(0,0,0,.06);
+    transform: translateY(-2px);
+}
+
+.apt-mini-category-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    background: #fff0ef;
+    color: var(--apt-red);
+}
+
+.apt-mini-category-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+.apt-mini-category strong {
+    display: block;
+    margin-bottom: 3px;
+
+    color: var(--apt-dark);
+
+    font-size: 14px;
+}
+
+.apt-mini-category span {
+    display: block;
+
+    color: var(--apt-muted);
+
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   3. HOW IT WORKS
+   ========================================================= */
+
+.apt-process-section {
+    background: var(--apt-soft);
+}
+
+.apt-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.apt-process-card {
+    position: relative;
+
+    padding: 31px 27px;
+
+    border: 1px solid #e2e5e7;
+    border-radius: 8px;
+
+    background: #fff;
+}
+
+.apt-process-number {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+
+    color: #ebeef0;
+
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.apt-process-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    background: var(--apt-red);
+    color: #fff;
+}
+
+.apt-process-icon svg {
+    width: 25px;
+    height: 25px;
+}
+
+.apt-process-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--apt-dark);
+
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.apt-process-card p {
+    margin-bottom: 0;
+
+    color: var(--apt-text);
+
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   4. SERVICES / WHAT WE SUPPLY
+   ========================================================= */
+
+.apt-services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 42px;
+    align-items: center;
+}
+
+.apt-services-image {
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+
+    border-radius: 9px;
+}
+
+.apt-services-image img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.apt-services-image-badge {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+
+    max-width: 300px;
+    padding: 18px 20px;
+
+    border-left: 4px solid var(--apt-red);
+
+    background: rgba(23,28,33,.94);
+    color: #fff;
+}
+
+.apt-services-image-badge strong {
+    display: block;
+    margin-bottom: 4px;
+
+    font-size: 16px;
+}
+
+.apt-services-image-badge span {
+    color: rgba(255,255,255,.72);
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.apt-service-list {
+    margin: 26px 0 30px;
+
+    display: grid;
+    gap: 11px;
+}
+
+.apt-service-item {
+    padding: 14px 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    border: 1px solid var(--apt-line);
+    border-radius: 6px;
+
+    background: #fff;
+}
+
+.apt-service-check {
+    width: 26px;
+    height: 26px;
+    flex: 0 0 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff0ef;
+    color: var(--apt-red);
+}
+
+.apt-service-check svg {
+    width: 14px;
+    height: 14px;
+}
+
+.apt-service-item strong {
+    display: block;
+    margin-bottom: 2px;
+
+    color: var(--apt-dark);
+
+    font-size: 13px;
+}
+
+.apt-service-item span {
+    display: block;
+
+    color: var(--apt-muted);
+
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   5. DARK B2B / SELL PARTS BAND
+   ========================================================= */
+
+.apt-trade-band {
+    position: relative;
+    overflow: hidden;
+
+    padding: 72px 0;
+
+    background:
+        linear-gradient(90deg, rgba(19,24,28,.98), rgba(19,24,28,.91)),
+        url("https://images.unsplash.com/photo-1685302756919-552804341540?fit=crop&w=1800&q=86")
+        center/cover no-repeat;
+}
+
+.apt-trade-band::after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+
+    width: 330px;
+    height: 330px;
+
+    border: 55px solid rgba(225,6,0,.12);
+    border-radius: 50%;
+}
+
+.apt-trade-inner {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+}
+
+.apt-trade-band .apt-section-kicker,
+.apt-trade-band .apt-section-title {
+    color: #fff;
+}
+
+.apt-trade-band .apt-section-kicker::before {
+    background: var(--apt-red);
+}
+
+.apt-trade-band .apt-section-intro {
+    max-width: 780px;
+    margin-bottom: 0;
+
+    color: rgba(255,255,255,.72);
+}
+
+.apt-trade-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.apt-trade-band .apt-button-outline {
+    border-color: rgba(255,255,255,.65);
+    color: #fff !important;
+}
+
+.apt-trade-band .apt-button-outline:hover {
+    background: #fff;
+    color: var(--apt-dark) !important;
+}
+
+
+/* =========================================================
+   6. WHY CHOOSE US
+   ========================================================= */
+
+.apt-why-section {
+    background: #fff;
+}
+
+.apt-why-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 54px;
+    align-items: center;
+}
+
+.apt-why-photo {
+    min-height: 470px;
+    overflow: hidden;
+
+    border-radius: 9px;
+}
+
+.apt-why-photo img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+}
+
+.apt-reasons {
+    margin-top: 27px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.apt-reason {
+    padding: 20px;
+
+    border: 1px solid var(--apt-line);
+    border-radius: 7px;
+
+    background: #fff;
+}
+
+.apt-reason-icon {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    background: #fff0ef;
+    color: var(--apt-red);
+}
+
+.apt-reason-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.apt-reason h3 {
+    margin-bottom: 5px;
+
+    color: var(--apt-dark);
+
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.apt-reason p {
+    margin-bottom: 0;
+
+    color: var(--apt-muted);
+
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   7. FAQ
+   ========================================================= */
+
+.apt-faq-section {
+    background: var(--apt-soft);
+}
+
+.apt-faq-layout {
+    display: grid;
+    grid-template-columns: .75fr 1.25fr;
+    gap: 55px;
+    align-items: start;
+}
+
+.apt-faq-side {
+    position: sticky;
+    top: 25px;
+}
+
+.apt-faq-side .apt-section-intro {
+    margin-bottom: 24px;
+}
+
+.apt-faq-list {
+    display: grid;
+    gap: 10px;
+}
+
+.apt-faq {
+    overflow: hidden;
+
+    border: 1px solid #dfe3e6;
+    border-radius: 7px;
+
+    background: #fff;
+}
+
+.apt-faq summary {
+    min-height: 62px;
+    padding: 17px 48px 17px 20px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--apt-dark);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+.apt-faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.apt-faq summary::after {
+    content: "+";
+
+    position: absolute;
+    right: 20px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--apt-red);
+
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.apt-faq[open] summary::after {
+    content: "−";
+}
+
+.apt-faq-answer {
+    padding: 0 20px 19px;
+
+    color: var(--apt-text);
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   8. FINAL CTA
+   ========================================================= */
+
+.apt-final-cta {
+    padding: 62px 0;
+
+    background: var(--apt-red);
+}
+
+.apt-final-cta-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+}
+
+.apt-final-cta h2 {
+    margin-bottom: 8px;
+
+    color: #fff;
+
+    font-size: clamp(27px, 3vw, 40px);
+    line-height: 1.08;
+    letter-spacing: -1px;
+    font-weight: 900;
+}
+
+.apt-final-cta p {
+    margin-bottom: 0;
+
+    max-width: 760px;
+
+    color: rgba(255,255,255,.80);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.apt-final-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.apt-final-cta .apt-button-dark {
+    background: var(--apt-dark);
+    border-color: var(--apt-dark);
+}
+
+.apt-final-cta .apt-button-outline {
+    border-color: #fff;
+    color: #fff !important;
+}
+
+.apt-final-cta .apt-button-outline:hover {
+    background: #fff;
+    color: var(--apt-dark) !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1080px) {
+
+    .apt-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .apt-hero-copy {
+        max-width: 780px;
+    }
+
+    .apt-hero-card {
+        max-width: 650px;
+    }
+
+    .apt-category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .apt-mini-categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .apt-services-grid,
+    .apt-why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .apt-services-image,
+    .apt-why-photo,
+    .apt-why-photo img {
+        min-height: 420px;
+        height: 420px;
+    }
+
+    .apt-trade-inner,
+    .apt-final-cta-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .apt-trade-actions,
+    .apt-final-cta-actions {
+        justify-content: flex-start;
+    }
+
+    .apt-faq-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .apt-faq-side {
+        position: static;
+    }
+}
+
+
+@media (max-width: 760px) {
+
+    .apt-wrap,
+    .apt-hero-inner {
+        width: calc(100% - 30px);
+    }
+
+    .apt-section {
+        padding: 54px 0;
+    }
+
+    .apt-hero {
+        min-height: auto;
+    }
+
+    .apt-hero-inner {
+        padding: 48px 0;
+    }
+
+    .apt-hero h1 {
+        font-size: 44px;
+        letter-spacing: -1.5px;
+    }
+
+    .apt-hero-lead {
+        font-size: 15px;
+    }
+
+    .apt-hero-card {
+        padding: 21px 17px;
+    }
+
+    .apt-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .apt-category-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .apt-category-grid,
+    .apt-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .apt-category-card {
+        min-height: 235px;
+    }
+
+    .apt-mini-categories {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .apt-services-image,
+    .apt-why-photo,
+    .apt-why-photo img {
+        min-height: 330px;
+        height: 330px;
+    }
+
+    .apt-reasons {
+        grid-template-columns: 1fr;
+    }
+
+    .apt-trade-band {
+        padding: 55px 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .apt-hero h1 {
+        font-size: 38px;
+    }
+
+    .apt-hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .apt-button {
+        width: 100%;
+    }
+
+    .apt-mini-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .apt-final-cta-actions {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+
+<div class="apt-homepage">
+
+
+<!-- ======================================================
+     HERO
+     ====================================================== -->
+
+<section class="apt-hero">
+
+    <div class="apt-hero-inner">
+
+        <div class="apt-hero-copy">
+
+            <div class="apt-hero-badge">
+                NEW &amp; USED AUTO PARTS
+            </div>
+
+            <h1>
+                Reliable Parts.<br>
+                <span>Straightforward Service.</span>
+            </h1>
+
+            <p class="apt-hero-lead">
+                Quality new and used vehicle parts supplied to drivers,
+                garages and businesses across the UK. Tell us what you need
+                and we’ll help you source the right part.
+            </p>
+
+            <div class="apt-hero-actions">
+
+                <a href="/parts-and-services/" class="apt-button apt-button-red">
+                    BROWSE PARTS
+                </a>
+
+                <a href="/contact/" class="apt-button apt-button-outline">
+                    SEND AN ENQUIRY
+                </a>
+
+            </div>
+
+            <div class="apt-hero-points">
+
+                <div class="apt-hero-point">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="m9 16.2-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5L9 16.2z"/>
+                    </svg>
+                    New &amp; Used Parts
+                </div>
+
+                <div class="apt-hero-point">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="m9 16.2-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5L9 16.2z"/>
+                    </svg>
+                    Cars, Vans &amp; More
+                </div>
+
+                <div class="apt-hero-point">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="m9 16.2-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5L9 16.2z"/>
+                    </svg>
+                    UK Supply
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="apt-hero-card">
+
+            <h2>Find the Part You Need</h2>
+
+            <p class="apt-hero-card-sub">
+                Send us your vehicle details and the part you’re looking for.
+            </p>
+
+            <form action="/contact/" method="get">
+
+                <label class="apt-label" for="apt-home-reg">
+                    Vehicle registration
+                </label>
+
+                <div class="apt-hero-reg">
+
+                    <div class="apt-hero-reg-prefix">
+                        🇬🇧
+                        <span>GB</span>
+                    </div>
+
+                    <input
+                        id="apt-home-reg"
+                        class="apt-hero-reg-input"
+                        type="text"
+                        name="reg"
+                        maxlength="8"
+                        placeholder="YOUR REG">
+
+                </div>
+
+                <div class="apt-form-row">
+
+                    <select class="apt-select" name="vehicle">
+                        <option value="">Vehicle Type</option>
+                        <option>Car</option>
+                        <option>Van</option>
+                        <option>Motorcycle</option>
+                        <option>Commercial Vehicle</option>
+                    </select>
+
+                    <select class="apt-select" name="category">
+                        <option value="">Part Category</option>
+                        <option>Engine</option>
+                        <option>Gearbox</option>
+                        <option>Body Part</option>
+                        <option>Electrical</option>
+                        <option>Mechanical</option>
+                        <option>Other</option>
+                    </select>
+
+                </div>
+
+                <input
+                    class="apt-field"
+                    type="text"
+                    name="part"
+                    placeholder="Part name or details">
+
+                <button class="apt-hero-find" type="submit">
+                    FIND / REQUEST PART
+                </button>
+
+                <p class="apt-form-note">
+                    Your details will be passed to our enquiry page so we can help match the part.
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     SHOP / BROWSE CATEGORIES
+     ====================================================== -->
+
+<section class="apt-section apt-category-section">
+
+    <div class="apt-wrap">
+
+        <div class="apt-category-head">
+
+            <div>
+                <div class="apt-section-kicker">Browse our range</div>
+                <h2 class="apt-section-title">Parts for the Jobs That Matter</h2>
+                <p class="apt-section-intro">
+                    From major powertrain components to body and electrical parts,
+                    explore the main areas we can help you source.
+                </p>
+            </div>
+
+            <a href="/parts-and-services/" class="apt-button apt-button-outline">
+                VIEW ALL PARTS
+            </a>
+
+        </div>
+
+
+        <div class="apt-category-grid">
+
+            <a href="/parts-and-services/" class="apt-category-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1685302756919-552804341540?fit=crop&w=1000&q=86"
+                    alt="Vehicle engines and mechanical parts"
+                    loading="lazy">
+
+                <div class="apt-category-card-body">
+                    <h3>Engines &amp; Gearboxes</h3>
+                    <p>
+                        Replacement powertrain components sourced for compatibility and condition.
+                    </p>
+                    <span class="apt-category-link">
+                        EXPLORE <span>→</span>
+                    </span>
+                </div>
+
+            </a>
+
+
+            <a href="/parts-and-services/" class="apt-category-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1667854515617-e855a602e4f5?fit=crop&w=1000&q=86"
+                    alt="Vehicle body and exterior components"
+                    loading="lazy">
+
+                <div class="apt-category-card-body">
+                    <h3>Body &amp; Exterior</h3>
+                    <p>
+                        Panels, exterior components and replacement body parts for repairs and rebuilds.
+                    </p>
+                    <span class="apt-category-link">
+                        EXPLORE <span>→</span>
+                    </span>
+                </div>
+
+            </a>
+
+
+            <a href="/parts-and-services/" class="apt-category-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1676120256735-bff2af807d9f?fit=crop&w=1000&q=86"
+                    alt="Vehicle engine bay and electrical components"
+                    loading="lazy">
+
+                <div class="apt-category-card-body">
+                    <h3>Electrical &amp; Mechanical</h3>
+                    <p>
+                        Electrical, engine-bay and mechanical components matched to your vehicle details.
+                    </p>
+                    <span class="apt-category-link">
+                        EXPLORE <span>→</span>
+                    </span>
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <div class="apt-mini-categories">
+
+            <a href="/parts-and-services/" class="apt-mini-category">
+
+                <div class="apt-mini-category-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M5 5h14v14H5zM8 8v8h8V8H8zm-6 3h3v2H2v-2zm17 0h3v2h-3v-2zM11 2h2v3h-2V2zm0 17h2v3h-2v-3z"/>
+                    </svg>
+                </div>
+
+                <div>
+                    <strong>Electrical</strong>
+                    <span>Vehicle electrical components</span>
+                </div>
+
+            </a>
+
+
+            <a href="/parts-and-services/" class="apt-mini-category">
+
+                <div class="apt-mini-category-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M7 4h10l2 6v9h-2v-2H7v2H5v-9l2-6zm1.5 2L7 10h10l-1.5-4h-7zM8 13a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm8 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                    </svg>
+                </div>
+
+                <div>
+                    <strong>Body Parts</strong>
+                    <span>Exterior and replacement panels</span>
+                </div>
+
+            </a>
+
+
+            <a href="/parts-and-services/" class="apt-mini-category">
+
+                <div class="apt-mini-category-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M3 11h3l2-5h8l2 5h3v7h-2v2h-3v-2H8v2H5v-2H3v-7zm6-3-1.2 3h8.4L15 8H9z"/>
+                    </svg>
+                </div>
+
+                <div>
+                    <strong>Van Parts</strong>
+                    <span>Parts for vans and light commercial vehicles</span>
+                </div>
+
+            </a>
+
+
+            <a href="/contact/" class="apt-mini-category">
+
+                <div class="apt-mini-category-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 17h-2v-2h2v2zm2.1-7.8-.9.9A3.5 3.5 0 0 0 13 15h-2v-.5a4.6 4.6 0 0 1 1.5-3.4l1.2-1.2a1.8 1.8 0 1 0-3-1.3H8.8a3.7 3.7 0 1 1 6.3 2.6z"/>
+                    </svg>
+                </div>
+
+                <div>
+                    <strong>Something Else?</strong>
+                    <span>Send us the part details</span>
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     HOW IT WORKS
+     ====================================================== -->
+
+<section class="apt-section apt-process-section">
+
+    <div class="apt-wrap">
+
+        <div class="apt-section-kicker">Simple sourcing</div>
+        <h2 class="apt-section-title">Three Steps to the Right Part</h2>
+
+        <p class="apt-section-intro">
+            Keep the process simple: tell us about your vehicle, tell us what you need,
+            and use the enquiry route to confirm the right component.
+        </p>
+
+
+        <div class="apt-process-grid">
+
+            <div class="apt-process-card">
+
+                <div class="apt-process-number">01</div>
+
+                <div class="apt-process-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M5 11 7 6h10l2 5 2 1v6h-2v2h-2v-2H7v2H5v-2H3v-6l2-1z"/>
+                        <path d="M8 8h8"/>
+                    </svg>
+                </div>
+
+                <h3>Send Vehicle Details</h3>
+
+                <p>
+                    Share your registration or the make, model and relevant vehicle details.
+                </p>
+
+            </div>
+
+
+            <div class="apt-process-card">
+
+                <div class="apt-process-number">02</div>
+
+                <div class="apt-process-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="m20 20-4-4"></path>
+                    </svg>
+                </div>
+
+                <h3>Tell Us the Part</h3>
+
+                <p>
+                    Give us the part name, part number, photo or any details you already have.
+                </p>
+
+            </div>
+
+
+            <div class="apt-process-card">
+
+                <div class="apt-process-number">03</div>
+
+                <div class="apt-process-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="m5 12 4 4L19 6"/>
+                    </svg>
+                </div>
+
+                <h3>Confirm the Match</h3>
+
+                <p>
+                    Review the supplied details before ordering so compatibility is clear.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     PARTS & SERVICES
+     ====================================================== -->
+
+<section class="apt-section">
+
+    <div class="apt-wrap apt-services-grid">
+
+        <div class="apt-services-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1616088336834-44f8ba1c7313?fit=crop&w=1200&q=87"
+                alt="Vehicle engine components"
+                loading="lazy">
+
+            <div class="apt-services-image-badge">
+                <strong>New &amp; Used Components</strong>
+                <span>
+                    Parts sourced for cars, vans and commercial vehicles.
+                </span>
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="apt-section-kicker">Parts &amp; services</div>
+
+            <h2 class="apt-section-title">
+                More Than a Parts Listing
+            </h2>
+
+            <p class="apt-section-intro">
+                Auto Parts Trading helps customers source vehicle components by enquiry,
+                including major mechanical, electrical and body parts.
+            </p>
+
+
+            <div class="apt-service-list">
+
+                <div class="apt-service-item">
+
+                    <div class="apt-service-check">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="m9 16.2-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5L9 16.2z"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <strong>New &amp; Used Parts</strong>
+                        <span>Components for a range of vehicle repair and replacement needs.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="apt-service-item">
+
+                    <div class="apt-service-check">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="m9 16.2-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5L9 16.2z"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <strong>Engines &amp; Gearboxes</strong>
+                        <span>Powertrain components supplied with relevant vehicle and part details.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="apt-service-item">
+
+                    <div class="apt-service-check">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="m9 16.2-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5L9 16.2z"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <strong>Body &amp; Electrical Components</strong>
+                        <span>Panels, lighting, electronics and other vehicle components.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="apt-service-item">
+
+                    <div class="apt-service-check">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="m9 16.2-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5L9 16.2z"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <strong>Surplus Parts Enquiries</strong>
+                        <span>Contact us if you have automotive parts you want to sell.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div style="display:flex;flex-wrap:wrap;gap:10px;">
+
+                <a href="/parts-and-services/" class="apt-button apt-button-red">
+                    VIEW PARTS &amp; SERVICES
+                </a>
+
+                <a href="/contact/" class="apt-button apt-button-outline">
+                    REQUEST A QUOTE
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     TRADE / SELL PARTS BAND
+     ====================================================== -->
+
+<section class="apt-trade-band">
+
+    <div class="apt-wrap apt-trade-inner">
+
+        <div>
+
+            <div class="apt-section-kicker">For garages, businesses &amp; sellers</div>
+
+            <h2 class="apt-section-title">
+                Buying, Sourcing or Selling Vehicle Parts?
+            </h2>
+
+            <p class="apt-section-intro">
+                Whether you need a replacement component for a repair or want to discuss
+                surplus automotive parts, use our enquiry service to send the details.
+            </p>
+
+        </div>
+
+
+        <div class="apt-trade-actions">
+
+            <a href="/contact/" class="apt-button apt-button-red">
+                SEND DETAILS
+            </a>
+
+            <a href="/parts-and-services/" class="apt-button apt-button-outline">
+                OUR SERVICES
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     WHY CHOOSE US
+     ====================================================== -->
+
+<section class="apt-section apt-why-section">
+
+    <div class="apt-wrap apt-why-grid">
+
+        <div class="apt-why-photo">
+
+            <img
+                src="https://images.unsplash.com/photo-1551522435-a13afa10f103?fit=crop&w=1200&q=87"
+                alt="Automotive workshop with vehicles"
+                loading="lazy">
+
+        </div>
+
+
+        <div>
+
+            <div class="apt-section-kicker">Why Auto Parts Trading</div>
+
+            <h2 class="apt-section-title">
+                Clear, Practical Parts Sourcing
+            </h2>
+
+            <p class="apt-section-intro">
+                The focus is straightforward: understand the vehicle, identify the part
+                needed and keep the enquiry process clear from the start.
+            </p>
+
+
+            <div class="apt-reasons">
+
+                <div class="apt-reason">
+
+                    <div class="apt-reason-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2 4 5v6c0 5.2 3.4 9.8 8 11 4.6-1.2 8-5.8 8-11V5l-8-3zm0 4v12c-2.8-1.2-5-4.3-5-7V7l5-1z"/>
+                        </svg>
+                    </div>
+
+                    <h3>Vehicle-Focused Enquiries</h3>
+
+                    <p>
+                        Use registration, model and part details to make the request more specific.
+                    </p>
+
+                </div>
+
+
+                <div class="apt-reason">
+
+                    <div class="apt-reason-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M3 5h11v10H3V5zm12 4h3.4L21 12v3h-6V9zM6 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm12 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                        </svg>
+                    </div>
+
+                    <h3>UK Customer Supply</h3>
+
+                    <p>
+                        The website is set up to serve drivers, garages and businesses across the UK.
+                    </p>
+
+                </div>
+
+
+                <div class="apt-reason">
+
+                    <div class="apt-reason-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M2 12 12 2h8a2 2 0 0 1 2 2v8L12 22 2 12zm15-7a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                        </svg>
+                    </div>
+
+                    <h3>New &amp; Used Options</h3>
+
+                    <p>
+                        Enquire about both new and used components depending on the part required.
+                    </p>
+
+                </div>
+
+
+                <div class="apt-reason">
+
+                    <div class="apt-reason-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M4 14v-2a8 8 0 0 1 16 0v2"></path>
+                            <path d="M4 14H2v5h4v-5H4zm16 0h2v5h-4v-5h2z"></path>
+                        </svg>
+                    </div>
+
+                    <h3>Direct Enquiry Route</h3>
+
+                    <p>
+                        If a part is not listed, customers can send the vehicle and part information directly.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FAQ
+     ====================================================== -->
+
+<section class="apt-section apt-faq-section">
+
+    <div class="apt-wrap apt-faq-layout">
+
+        <div class="apt-faq-side">
+
+            <div class="apt-section-kicker">Common questions</div>
+
+            <h2 class="apt-section-title">
+                Before You Send an Enquiry
+            </h2>
+
+            <p class="apt-section-intro">
+                The more accurate the vehicle and part information, the easier it is
+                to discuss the correct component.
+            </p>
+
+            <a href="/contact/" class="apt-button apt-button-red">
+                CONTACT US
+            </a>
+
+        </div>
+
+
+        <div class="apt-faq-list">
+
+
+            <details class="apt-faq">
+                <summary>What details should I send when requesting a part?</summary>
+
+                <div class="apt-faq-answer">
+                    Send your vehicle registration where available, make and model,
+                    the part you need, and any part number or photo that may help identify it.
+                </div>
+            </details>
+
+
+            <details class="apt-faq">
+                <summary>Do you supply both new and used parts?</summary>
+
+                <div class="apt-faq-answer">
+                    The website advertises both new and used vehicle parts. Availability will
+                    depend on the specific component and vehicle, so use the enquiry form for details.
+                </div>
+            </details>
+
+
+            <details class="apt-faq">
+                <summary>Can I enquire about engines and gearboxes?</summary>
+
+                <div class="apt-faq-answer">
+                    Yes. Engines and gearboxes are among the main component categories shown
+                    on the Parts &amp; Services page.
+                </div>
+            </details>
+
+
+            <details class="apt-faq">
+                <summary>Can garages and businesses contact you?</summary>
+
+                <div class="apt-faq-answer">
+                    Yes. The site is positioned for drivers, garages and businesses,
+                    so trade and business enquiries can be sent through the contact route.
+                </div>
+            </details>
+
+
+            <details class="apt-faq">
+                <summary>Can I contact you if the exact part is not shown online?</summary>
+
+                <div class="apt-faq-answer">
+                    Yes. Send an enquiry with the vehicle and part information so the request
+                    can be reviewed rather than relying only on items displayed on the website.
+                </div>
+            </details>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FINAL CTA
+     ====================================================== -->
+
+<section class="apt-final-cta">
+
+    <div class="apt-wrap apt-final-cta-inner">
+
+        <div>
+
+            <h2>Need a Part? Send Us the Details.</h2>
+
+            <p>
+                Tell us the vehicle, the component and any information you already have.
+                Use the enquiry page to start the conversation.
+            </p>
+
+        </div>
+
+
+        <div class="apt-final-cta-actions">
+
+            <a href="/contact/" class="apt-button apt-button-dark">
+                SEND ENQUIRY
+            </a>
+
+            <a href="/parts-and-services/" class="apt-button apt-button-outline">
+                VIEW PARTS
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</div>
+<!-- /wp:html -->

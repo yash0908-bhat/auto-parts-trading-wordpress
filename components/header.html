@@ -1,0 +1,1364 @@
+<!-- wp:html -->
+<style>
+/* =========================================================
+   AUTO PARTS TRADING — CLEAN FINAL HEADER
+   One consolidated stylesheet: no duplicate overrides
+   ========================================================= */
+
+.apt-header,
+.apt-header * {
+    box-sizing: border-box;
+}
+
+.apt-header {
+    --apt-red: #e10600;
+    --apt-red-dark: #b90400;
+    --apt-dark: #171c21;
+    --apt-grey: #f5f6f7;
+    --apt-border: #dfe3e6;
+
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    background: #fff;
+    color: var(--apt-dark);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.apt-header p,
+.apt-header form {
+    margin: 0;
+}
+
+/* Remove Gutenberg's automatic vertical spacing between header blocks */
+.apt-header > *,
+.apt-header > * + *,
+.apt-header.is-layout-flow > * + * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+}
+
+
+/* =========================================================
+   1. TOP INFORMATION BAR
+   ========================================================= */
+
+.apt-topbar {
+    width: 100%;
+    min-height: 34px;
+    margin: 0 !important;
+    background: var(--apt-grey);
+    border-bottom: 1px solid #e6e8ea;
+}
+
+.apt-topbar-inner {
+    width: min(1440px, calc(100% - 40px));
+    min-height: 34px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.apt-top-left,
+.apt-top-right {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.apt-top-item {
+    min-height: 18px;
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    border-right: 1px solid #d5d8da;
+
+    color: #596068 !important;
+    text-decoration: none !important;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.apt-top-item:first-child {
+    padding-left: 0;
+}
+
+.apt-top-left .apt-top-item:last-child,
+.apt-top-right .apt-top-item:last-child {
+    border-right: 0;
+}
+
+.apt-top-right .apt-top-item:last-child {
+    padding-right: 0;
+}
+
+.apt-top-item strong {
+    color: var(--apt-dark);
+    font-weight: 700;
+}
+
+.apt-icon {
+    width: 17px;
+    height: 17px;
+    flex: 0 0 17px;
+    color: var(--apt-dark);
+}
+
+.apt-icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =========================================================
+   2. MAIN LOGO / SEARCH / ACTIONS
+   ========================================================= */
+
+.apt-main {
+    width: 100%;
+    margin: 0 !important;
+    background: #fff;
+}
+
+.apt-main-inner {
+    width: min(1440px, calc(100% - 40px));
+    min-height: 90px;
+    margin: 0 auto !important;
+    padding: 6px 0 !important;
+
+    display: grid !important;
+    grid-template-columns: 300px minmax(360px, 1fr) 300px;
+    align-items: center !important;
+    gap: 28px;
+}
+
+/* Logo */
+.apt-logo-area {
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start;
+    align-self: center !important;
+}
+
+.apt-logo-area .wp-block-site-logo {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.apt-logo-area .wp-block-site-logo img {
+    display: block;
+    width: 270px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    object-fit: contain;
+}
+
+/* Search */
+.apt-search-holder {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    align-self: center !important;
+}
+
+.apt-search-form {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+}
+
+.apt-search-box {
+    width: 100%;
+    height: 50px;
+    margin: 0 !important;
+
+    display: grid;
+    grid-template-columns: 165px minmax(0, 1fr) 58px;
+    align-items: stretch;
+
+    overflow: hidden;
+    border: 1px solid #d5d9dc;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.apt-category-select {
+    width: 100%;
+    height: 100%;
+    padding: 0 34px 0 15px;
+
+    border: 0;
+    border-right: 1px solid #d5d9dc;
+    outline: 0;
+
+    background: #f8f9fa;
+    color: #252a2f;
+
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.apt-search-input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 17px;
+
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+
+    background: #fff;
+    color: #20252a;
+
+    font-size: 14px;
+}
+
+.apt-search-input::placeholder {
+    color: #969ba0;
+}
+
+.apt-search-button {
+    width: 58px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 0;
+
+    background: var(--apt-red);
+    color: #fff;
+    cursor: pointer;
+    transition: background .18s ease;
+}
+
+.apt-search-button:hover {
+    background: var(--apt-red-dark);
+}
+
+.apt-search-button svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Account / wishlist / basket */
+.apt-actions {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    align-self: center !important;
+    gap: 8px;
+}
+
+.apt-action {
+    position: relative;
+    min-width: 88px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    color: var(--apt-dark) !important;
+    text-decoration: none !important;
+}
+
+.apt-action-icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+}
+
+.apt-action-icon svg {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.apt-action-label {
+    color: var(--apt-dark);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.apt-counter {
+    position: absolute;
+    top: -7px;
+    right: -8px;
+
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 999px;
+    background: var(--apt-red);
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   3. NAVIGATION
+   ========================================================= */
+
+.apt-navbar {
+    width: 100%;
+    min-height: 52px;
+    margin: 0 !important;
+
+    background: var(--apt-dark);
+    color: #fff;
+}
+
+.apt-nav-inner {
+    position: relative;
+
+    width: min(1440px, calc(100% - 30px));
+    min-height: 52px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.apt-mobile-toggle,
+.apt-mobile-menu-button,
+.apt-mobile-reg {
+    display: none;
+}
+
+.apt-menu {
+    min-width: 0;
+    margin: 0 28px 0 0 !important;
+    padding: 0 !important;
+
+    display: flex;
+    align-items: stretch;
+    flex: 1 1 auto;
+
+    list-style: none;
+}
+
+.apt-menu li {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.apt-menu a {
+    min-height: 52px;
+    padding: 0 13px;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center;
+    gap: 7px;
+
+    color: #fff !important;
+    text-decoration: none !important;
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+
+    transition: background .18s ease, color .18s ease;
+}
+
+.apt-menu a:hover {
+    background: #252c31;
+}
+
+.home .apt-home-link {
+    background: var(--apt-red);
+}
+
+.apt-clearance {
+    color: #ff302a !important;
+}
+
+.apt-home-icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+}
+
+/* Real SVG chevrons — no baseline/low-arrow problem */
+.apt-chevron {
+    width: 10px;
+    height: 10px;
+    flex: 0 0 10px;
+    margin-left: 1px;
+
+    display: block;
+    color: currentColor;
+}
+
+.apt-chevron svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =========================================================
+   VEHICLE LOOKUP — DESKTOP
+   ========================================================= */
+
+.apt-vehicle-area {
+    flex: 0 0 auto;
+    margin-left: 0;
+    padding-left: 28px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    border-left: 1px solid #51585e;
+}
+
+.apt-vehicle-title {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.apt-car-icon {
+    display: block;
+    width: 23px;
+    height: 23px;
+    flex: 0 0 23px;
+}
+
+.apt-reg-form {
+    height: 40px;
+    margin: 0 !important;
+
+    display: flex;
+    align-items: stretch;
+    flex: 0 0 auto;
+}
+
+.apt-reg-prefix {
+    width: 34px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px 0 0 4px;
+
+    background: #16499b;
+    color: #fff;
+
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.apt-reg-input {
+    width: 112px;
+    padding: 0 7px;
+
+    border: 0;
+    outline: 0;
+
+    background: #ffd400;
+    color: #111;
+
+    font-size: 14px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.apt-reg-input::placeholder {
+    color: #111;
+    opacity: 1;
+}
+
+.apt-reg-go {
+    width: 38px;
+
+    border: 0;
+    border-radius: 0 4px 4px 0;
+
+    background: #ffd400;
+    color: #111;
+
+    font-size: 11px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   4. BENEFIT STRIP
+   ========================================================= */
+
+.apt-benefits {
+    width: 100%;
+    margin: 0 !important;
+
+    background: #fff;
+    border-bottom: 1px solid #e5e7e8;
+    box-shadow: 0 3px 10px rgba(0,0,0,.035);
+}
+
+.apt-benefits-inner {
+    width: min(1440px, calc(100% - 40px));
+    min-height: 68px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+}
+
+.apt-benefit {
+    min-height: 44px;
+    padding: 0 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    border-right: 1px solid #dfe2e4;
+}
+
+.apt-benefit:first-child {
+    padding-left: 28px;
+}
+
+.apt-benefit:last-child {
+    border-right: 0;
+}
+
+.apt-benefit-icon {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    color: var(--apt-dark);
+}
+
+.apt-benefit-icon svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.apt-benefit-copy strong {
+    display: block;
+    margin: 0 0 2px;
+
+    color: var(--apt-dark);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.apt-benefit-copy span {
+    display: block;
+    color: #4e565d;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   RESPONSIVE — LARGE / NORMAL LAPTOP
+   ========================================================= */
+
+/* Full vehicle label becomes too wide first.
+   Keep the car icon + registration box and preserve a clean gap. */
+@media (max-width: 1520px) {
+    .apt-vehicle-text {
+        display: none;
+    }
+
+    .apt-vehicle-area {
+        padding-left: 24px;
+        gap: 10px;
+    }
+
+    .apt-menu {
+        margin-right: 24px !important;
+    }
+}
+
+@media (max-width: 1320px) {
+    .apt-main-inner {
+        grid-template-columns: 250px minmax(320px, 1fr) 260px;
+        gap: 20px;
+    }
+
+    .apt-logo-area .wp-block-site-logo img {
+        width: 225px !important;
+    }
+
+    .apt-menu a {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 12px;
+    }
+
+    .apt-menu {
+        margin-right: 20px !important;
+    }
+
+    .apt-vehicle-area {
+        padding-left: 20px;
+    }
+
+    .apt-reg-input {
+        width: 98px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET / MOBILE NAV
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    /* Top ribbon */
+    .apt-top-right {
+        display: none;
+    }
+
+    .apt-topbar-inner {
+        justify-content: center;
+    }
+
+    /* Main header */
+    .apt-main-inner {
+        width: calc(100% - 30px);
+        min-height: auto;
+        padding: 11px 0 !important;
+
+        grid-template-columns: minmax(160px, 1fr) auto;
+        gap: 12px;
+    }
+
+    .apt-logo-area {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .apt-logo-area .wp-block-site-logo img {
+        width: 190px !important;
+    }
+
+    .apt-actions {
+        grid-column: 2;
+        grid-row: 1;
+        gap: 9px;
+    }
+
+    .apt-action {
+        min-width: 40px;
+    }
+
+    .apt-action-label {
+        display: none;
+    }
+
+    .apt-search-holder {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .apt-search-box {
+        grid-template-columns: 135px minmax(0, 1fr) 52px;
+        height: 47px;
+    }
+
+    .apt-search-button {
+        width: 52px;
+        height: 47px;
+    }
+
+    .apt-category-select {
+        padding-left: 11px;
+        padding-right: 24px;
+        font-size: 11px;
+    }
+
+    .apt-search-input {
+        padding: 0 12px;
+        font-size: 13px;
+    }
+
+    /* Mobile navigation */
+    .apt-navbar {
+        min-height: 52px;
+        overflow: visible;
+    }
+
+    .apt-nav-inner {
+        width: 100%;
+        min-height: 52px;
+        padding: 0 15px;
+
+        align-items: center;
+    }
+
+    .apt-mobile-menu-button {
+        width: 42px;
+        height: 42px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #fff;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .apt-mobile-menu-button svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .apt-menu {
+        position: absolute;
+        top: 52px;
+        left: 0;
+        right: 0;
+        z-index: 99999;
+
+        width: 100%;
+        margin: 0 !important;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+
+        background: var(--apt-dark);
+        box-shadow: 0 12px 25px rgba(0,0,0,.22);
+    }
+
+    .apt-menu li {
+        width: 100%;
+        display: block;
+    }
+
+    .apt-menu a {
+        width: 100%;
+        min-height: 48px;
+        padding: 0 20px;
+
+        justify-content: flex-start;
+
+        border-bottom: 1px solid #2a3137;
+
+        font-size: 14px;
+    }
+
+    .apt-menu a .apt-chevron {
+        margin-left: auto;
+    }
+
+    .apt-mobile-toggle:checked ~ .apt-menu {
+        display: flex;
+    }
+
+    .apt-vehicle-area {
+        display: none;
+    }
+
+    .apt-mobile-reg {
+        height: 38px;
+        margin-left: auto !important;
+
+        display: flex;
+        align-items: stretch;
+    }
+
+    .apt-mobile-reg .apt-reg-prefix {
+        width: 31px;
+    }
+
+    .apt-mobile-reg .apt-reg-input {
+        width: 95px;
+        font-size: 13px;
+    }
+
+    .apt-mobile-reg .apt-reg-go {
+        width: 36px;
+    }
+
+    /* Benefits */
+    .apt-benefits-inner {
+        width: calc(100% - 20px);
+        grid-template-columns: 1fr 1fr;
+        padding: 5px 0;
+    }
+
+    .apt-benefit {
+        padding: 10px;
+        justify-content: flex-start;
+        border-right: 0;
+    }
+
+    .apt-benefit:first-child {
+        padding-left: 10px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — PHONE
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+    .apt-top-left .apt-top-item:not(:first-child) {
+        display: none;
+    }
+
+    .apt-top-left .apt-top-item:first-child {
+        padding: 0;
+        border: 0;
+    }
+
+    .apt-logo-area .wp-block-site-logo img {
+        width: 158px !important;
+    }
+
+    .apt-actions {
+        gap: 6px;
+    }
+
+    .apt-wishlist {
+        display: none;
+    }
+
+    .apt-search-box {
+        grid-template-columns: minmax(0, 1fr) 50px;
+    }
+
+    .apt-category-select {
+        display: none;
+    }
+
+    .apt-search-button {
+        width: 50px;
+    }
+
+    .apt-mobile-reg .apt-reg-input {
+        width: 82px;
+    }
+
+    .apt-benefit-icon {
+        width: 26px;
+        height: 26px;
+        flex-basis: 26px;
+    }
+
+    .apt-benefit-copy strong {
+        font-size: 12px;
+    }
+
+    .apt-benefit-copy span {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 390px) {
+    .apt-logo-area .wp-block-site-logo img {
+        width: 138px !important;
+    }
+
+    .apt-mobile-reg .apt-reg-prefix {
+        display: none;
+    }
+
+    .apt-mobile-reg .apt-reg-input {
+        width: 78px;
+    }
+}
+</style>
+<!-- /wp:html -->
+
+
+<!-- wp:group {"className":"apt-header","layout":{"type":"default"}} -->
+<div class="wp-block-group apt-header">
+
+
+<!-- TOP INFORMATION BAR -->
+<!-- wp:html -->
+<div class="apt-topbar">
+    <div class="apt-topbar-inner">
+
+        <div class="apt-top-left">
+
+            <div class="apt-top-item">
+                <span class="apt-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M3 5h11v10H3V5zm12 4h3.4L21 12v3h-6V9zM6 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm12 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                    </svg>
+                </span>
+                <span><strong>Free UK Delivery</strong> on orders over £50</span>
+            </div>
+
+            <div class="apt-top-item">
+                <span class="apt-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2 4 5v6c0 5.2 3.4 9.8 8 11 4.6-1.2 8-5.8 8-11V5l-8-3zm0 4v12c-2.8-1.2-5-4.3-5-7V7l5-1z"/>
+                    </svg>
+                </span>
+                <span><strong>Quality Auto Parts</strong> New &amp; Used</span>
+            </div>
+
+            <div class="apt-top-item">
+                <span class="apt-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M3 12a9 9 0 1 0 3-6.7"/>
+                        <path d="M3 4v6h6"/>
+                    </svg>
+                </span>
+                <span><strong>Easy Returns</strong> Hassle Free</span>
+            </div>
+
+        </div>
+
+        <div class="apt-top-right">
+
+            <a class="apt-top-item" href="tel:+123456789">
+                <span class="apt-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M6.6 10.8c1.6 3.2 3.4 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2z"/>
+                    </svg>
+                </span>
+                <strong>(+1) 23456789</strong>
+            </a>
+
+            <a class="apt-top-item" href="mailto:nirav94trivedi@gmail.com">
+                <span class="apt-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M2 5h20v14H2V5zm10 7L4 7v10h16V7l-8 5zm0-2 8-5H4l8 5z"/>
+                    </svg>
+                </span>
+                <strong>nirav94trivedi@gmail.com</strong>
+            </a>
+
+        </div>
+
+    </div>
+</div>
+<!-- /wp:html -->
+
+
+<!-- MAIN LOGO / SEARCH / ACTIONS -->
+<!-- wp:group {"className":"apt-main","layout":{"type":"default"}} -->
+<div class="wp-block-group apt-main">
+
+<!-- wp:group {"className":"apt-main-inner","layout":{"type":"default"}} -->
+<div class="wp-block-group apt-main-inner">
+
+
+<!-- LOGO -->
+<!-- wp:group {"className":"apt-logo-area","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group apt-logo-area">
+<!-- wp:site-logo {"width":270,"shouldSyncIcon":true} /-->
+</div>
+<!-- /wp:group -->
+
+
+<!-- SEARCH -->
+<!-- wp:html -->
+<div class="apt-search-holder">
+
+    <form class="apt-search-form" role="search" method="get" action="/">
+        <div class="apt-search-box">
+
+            <select class="apt-category-select" aria-label="Part category">
+                <option>All Categories</option>
+                <option>Car Parts</option>
+                <option>Van Parts</option>
+                <option>Motorcycle Parts</option>
+                <option>Engines</option>
+                <option>Gearboxes</option>
+                <option>Body Parts</option>
+                <option>Electrical Parts</option>
+                <option>Accessories</option>
+            </select>
+
+            <input
+                class="apt-search-input"
+                type="search"
+                name="s"
+                placeholder="Search for parts, make, model or part number..."
+                autocomplete="off">
+
+            <button class="apt-search-button" type="submit" aria-label="Search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <path d="m20 20-4-4"></path>
+                </svg>
+            </button>
+
+        </div>
+    </form>
+
+</div>
+<!-- /wp:html -->
+
+
+<!-- ACCOUNT / WISHLIST / CART -->
+<!-- wp:html -->
+<div class="apt-actions">
+
+    <a class="apt-action" href="/my-account/" aria-label="My Account">
+        <span class="apt-action-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <circle cx="12" cy="7" r="4"></circle>
+                <path d="M4 22c0-5 3.2-8 8-8s8 3 8 8"></path>
+            </svg>
+        </span>
+        <span class="apt-action-label">My Account</span>
+    </a>
+
+    <a class="apt-action apt-wishlist" href="/wishlist/" aria-label="Wishlist">
+        <span class="apt-action-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+            </svg>
+            <span class="apt-counter">0</span>
+        </span>
+        <span class="apt-action-label">Wishlist</span>
+    </a>
+
+    <a class="apt-action" href="/cart/" aria-label="Basket">
+        <span class="apt-action-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <circle cx="9" cy="20" r="1.5"></circle>
+                <circle cx="18" cy="20" r="1.5"></circle>
+                <path d="M2 3h3l2.2 11h10.9l2-7H6"></path>
+            </svg>
+            <span class="apt-counter">0</span>
+        </span>
+        <span class="apt-action-label">Basket</span>
+    </a>
+
+</div>
+<!-- /wp:html -->
+
+
+</div>
+<!-- /wp:group -->
+
+</div>
+<!-- /wp:group -->
+
+
+<!-- NAVIGATION -->
+<!-- wp:html -->
+<nav class="apt-navbar" aria-label="Main navigation">
+
+    <div class="apt-nav-inner">
+
+        <input
+            type="checkbox"
+            id="apt-mobile-toggle"
+            class="apt-mobile-toggle"
+            aria-hidden="true">
+
+        <label
+            for="apt-mobile-toggle"
+            class="apt-mobile-menu-button"
+            aria-label="Open navigation menu">
+
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 6h16"></path>
+                <path d="M4 12h16"></path>
+                <path d="M4 18h16"></path>
+            </svg>
+
+        </label>
+
+
+        <ul class="apt-menu">
+
+            <li>
+                <a class="apt-home-link" href="/">
+                    <svg class="apt-home-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M3 11 12 3l9 8v10h-6v-6H9v6H3V11z"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/parts-and-services/">
+                    <span>Car Parts</span>
+                    <span class="apt-chevron" aria-hidden="true">
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <path d="M2.5 4.5 6 8l3.5-3.5"/>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/parts-and-services/">
+                    <span>Van Parts</span>
+                    <span class="apt-chevron" aria-hidden="true">
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <path d="M2.5 4.5 6 8l3.5-3.5"/>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/parts-and-services/">
+                    <span>Motorcycle Parts</span>
+                    <span class="apt-chevron" aria-hidden="true">
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <path d="M2.5 4.5 6 8l3.5-3.5"/>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/parts-and-services/">
+                    <span>Accessories</span>
+                    <span class="apt-chevron" aria-hidden="true">
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <path d="M2.5 4.5 6 8l3.5-3.5"/>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/parts-and-services/">
+                    <span>Brands</span>
+                    <span class="apt-chevron" aria-hidden="true">
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.7">
+                            <path d="M2.5 4.5 6 8l3.5-3.5"/>
+                        </svg>
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a class="apt-clearance" href="/parts-and-services/">
+                    <span>Clearance</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="/contact/">
+                    <span>Contact Us</span>
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- DESKTOP VEHICLE LOOKUP -->
+        <div class="apt-vehicle-area">
+
+            <div class="apt-vehicle-title">
+
+                <svg class="apt-car-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M5 11 7 6h10l2 5 2 1v6h-2v2h-2v-2H7v2H5v-2H3v-6l2-1zm3-3-1.2 3h10.4L16 8H8zm-2 6a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm12 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/>
+                </svg>
+
+                <span class="apt-vehicle-text">Find Parts for Your Vehicle</span>
+
+            </div>
+
+            <form class="apt-reg-form" action="/contact/" method="get">
+
+                <div class="apt-reg-prefix">
+                    🇬🇧
+                    <span>GB</span>
+                </div>
+
+                <input
+                    class="apt-reg-input"
+                    type="text"
+                    name="reg"
+                    maxlength="8"
+                    placeholder="YOUR REG"
+                    aria-label="Vehicle registration">
+
+                <button class="apt-reg-go" type="submit">GO</button>
+
+            </form>
+
+        </div>
+
+
+        <!-- MOBILE VEHICLE LOOKUP -->
+        <form class="apt-reg-form apt-mobile-reg" action="/contact/" method="get">
+
+            <div class="apt-reg-prefix">
+                🇬🇧
+                <span>GB</span>
+            </div>
+
+            <input
+                class="apt-reg-input"
+                type="text"
+                name="reg"
+                maxlength="8"
+                placeholder="YOUR REG"
+                aria-label="Vehicle registration">
+
+            <button class="apt-reg-go" type="submit">GO</button>
+
+        </form>
+
+    </div>
+
+</nav>
+<!-- /wp:html -->
+
+
+<!-- BENEFITS -->
+<!-- wp:html -->
+<div class="apt-benefits">
+
+    <div class="apt-benefits-inner">
+
+        <div class="apt-benefit">
+
+            <div class="apt-benefit-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M19.4 13a7.8 7.8 0 0 0 0-2l2.1-1.6-2-3.4-2.5 1a8 8 0 0 0-1.7-1L15 3h-4l-.4 3a8 8 0 0 0-1.7 1L6.4 6l-2 3.4L6.5 11a7.8 7.8 0 0 0 0 2l-2.1 1.6 2 3.4 2.5-1a8 8 0 0 0 1.7 1L11 21h4l.4-3a8 8 0 0 0 1.7-1l2.5 1 2-3.4-2.2-1.6zM13 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+                </svg>
+            </div>
+
+            <div class="apt-benefit-copy">
+                <strong>Wide Range</strong>
+                <span>New &amp; Used Parts</span>
+            </div>
+
+        </div>
+
+
+        <div class="apt-benefit">
+
+            <div class="apt-benefit-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M2 12 12 2h8a2 2 0 0 1 2 2v8L12 22 2 12zm15-7a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                </svg>
+            </div>
+
+            <div class="apt-benefit-copy">
+                <strong>Competitive Prices</strong>
+                <span>Great Value Always</span>
+            </div>
+
+        </div>
+
+
+        <div class="apt-benefit">
+
+            <div class="apt-benefit-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2 4 5v6c0 5.2 3.4 9.8 8 11 4.6-1.2 8-5.8 8-11V5l-8-3zm0 4v12c-2.8-1.2-5-4.3-5-7V7l5-1z"/>
+                </svg>
+            </div>
+
+            <div class="apt-benefit-copy">
+                <strong>Trusted Supplier</strong>
+                <span>Quality You Can Rely On</span>
+            </div>
+
+        </div>
+
+
+        <div class="apt-benefit">
+
+            <div class="apt-benefit-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M4 14v-2a8 8 0 0 1 16 0v2"></path>
+                    <path d="M4 14H2v5h4v-5H4zm16 0h2v5h-4v-5h2z"></path>
+                    <path d="M18 20c-1 1-2 1-4 1"></path>
+                </svg>
+            </div>
+
+            <div class="apt-benefit-copy">
+                <strong>Expert Support</strong>
+                <span>Here to Help</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- /wp:html -->
+
+
+</div>
+<!-- /wp:group -->

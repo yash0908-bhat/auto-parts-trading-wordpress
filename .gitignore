@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+*.log
+node_modules/
+vendor/
+wp-config.php
+wp-content/uploads/
+.idea/
+.vscode/

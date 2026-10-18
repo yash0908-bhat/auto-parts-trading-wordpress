@@ -1,0 +1,774 @@
+<!-- wp:html -->
+<style>
+/* =========================================================
+   AUTO PARTS TRADING — CLEAN FOOTER
+   ========================================================= */
+
+.apt-footer,
+.apt-footer * {
+    box-sizing: border-box;
+}
+
+.apt-footer {
+    --apt-red: #e10600;
+    --apt-red-dark: #b90400;
+    --apt-dark: #171c21;
+    --apt-dark-2: #20272d;
+    --apt-text: #c7cdd1;
+    --apt-muted: #8e989f;
+    --apt-line: rgba(255,255,255,.11);
+
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: var(--apt-dark);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.apt-footer p,
+.apt-footer ul {
+    margin-top: 0;
+}
+
+.apt-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.apt-footer-wrap {
+    width: min(1320px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+
+/* =========================
+   MAIN FOOTER
+   ========================= */
+
+.apt-footer-main {
+    padding: 50px 0 42px;
+
+    background:
+        linear-gradient(135deg,#171c21 0%,#1c2328 55%,#14191d 100%);
+}
+
+.apt-footer-logo-row {
+    margin-bottom: 30px;
+}
+
+.apt-footer-logo-row .wp-block-site-logo {
+    margin: 0 !important;
+}
+
+.apt-footer-logo-row .wp-block-site-logo img {
+    width: 235px !important;
+    max-width: 100% !important;
+    height: auto !important;
+
+    /* Render the existing logo as a clean white footer mark */
+    filter: brightness(0) invert(1);
+}
+
+.apt-footer-grid {
+    display: grid;
+    grid-template-columns: 1.25fr .75fr .85fr 1.15fr;
+    gap: 44px;
+    align-items: start;
+}
+
+.apt-footer-about {
+    max-width: 360px;
+    margin-bottom: 20px !important;
+
+    color: var(--apt-text);
+
+    font-size: 13px;
+    line-height: 1.72;
+}
+
+.apt-footer-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.apt-footer-badge {
+    padding: 8px 10px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    border: 1px solid var(--apt-line);
+    border-radius: 5px;
+
+    background: rgba(255,255,255,.035);
+
+    color: #e8ebed;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.apt-footer-badge svg {
+    width: 15px;
+    height: 15px;
+    color: var(--apt-red);
+}
+
+.apt-footer-heading {
+    margin: 2px 0 19px;
+
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: .25px;
+    text-transform: uppercase;
+}
+
+.apt-footer-heading::after {
+    content: "";
+
+    display: block;
+
+    width: 34px;
+    height: 3px;
+
+    margin-top: 9px;
+
+    border-radius: 99px;
+
+    background: var(--apt-red);
+}
+
+.apt-footer-links {
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    gap: 10px;
+
+    list-style: none;
+}
+
+.apt-footer-links li {
+    margin: 0;
+    padding: 0;
+}
+
+.apt-footer-links a {
+    display: inline-flex;
+    align-items: center;
+
+    color: var(--apt-text) !important;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    transition: color .18s ease, transform .18s ease;
+}
+
+.apt-footer-links a::before {
+    content: "";
+
+    width: 5px;
+    height: 5px;
+
+    margin-right: 9px;
+
+    border-radius: 50%;
+
+    background: #596168;
+
+    transition: background .18s ease;
+}
+
+.apt-footer-links a:hover {
+    color: #fff !important;
+    transform: translateX(2px);
+}
+
+.apt-footer-links a:hover::before {
+    background: var(--apt-red);
+}
+
+
+/* CONTACT */
+
+.apt-footer-contact {
+    display: grid;
+    gap: 14px;
+}
+
+.apt-footer-contact-item {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 11px;
+    align-items: start;
+}
+
+.apt-footer-contact-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background: rgba(225,6,0,.12);
+    color: var(--apt-red);
+}
+
+.apt-footer-contact-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.apt-footer-contact-copy strong {
+    display: block;
+    margin-bottom: 3px;
+
+    color: #fff;
+
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+}
+
+.apt-footer-contact-copy a,
+.apt-footer-contact-copy span {
+    color: var(--apt-text) !important;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    word-break: break-word;
+}
+
+.apt-footer-contact-copy a:hover {
+    color: #fff !important;
+}
+
+
+/* =========================
+   INFO STRIP
+   ========================= */
+
+.apt-footer-info {
+    border-top: 1px solid var(--apt-line);
+    border-bottom: 1px solid var(--apt-line);
+
+    background: #151a1e;
+}
+
+.apt-footer-info-inner {
+    min-height: 66px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.apt-footer-info-item {
+    min-height: 40px;
+    padding: 0 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+
+    border-right: 1px solid var(--apt-line);
+}
+
+.apt-footer-info-item:first-child {
+    padding-left: 0;
+}
+
+.apt-footer-info-item:last-child {
+    padding-right: 0;
+    border-right: 0;
+}
+
+.apt-footer-info-icon {
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+
+    color: var(--apt-red);
+}
+
+.apt-footer-info-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.apt-footer-info-copy strong {
+    display: block;
+    margin-bottom: 2px;
+
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.apt-footer-info-copy span {
+    display: block;
+
+    color: var(--apt-muted);
+
+    font-size: 10px;
+    line-height: 1.3;
+}
+
+
+/* =========================
+   COPYRIGHT
+   ========================= */
+
+.apt-footer-bottom {
+    background: #101417;
+}
+
+.apt-footer-bottom-inner {
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.apt-footer-copyright {
+    margin: 0 !important;
+
+    color: #7f888f;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.apt-footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.apt-footer-legal a {
+    color: #9aa2a8 !important;
+
+    font-size: 11px;
+
+    transition: color .18s ease;
+}
+
+.apt-footer-legal a:hover {
+    color: #fff !important;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1050px) {
+
+    .apt-footer-grid {
+        grid-template-columns: 1.15fr 1fr 1fr;
+        gap: 34px;
+    }
+
+    .apt-footer-contact-column {
+        grid-column: 1 / -1;
+    }
+
+    .apt-footer-contact {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .apt-footer-wrap {
+        width: calc(100% - 30px);
+    }
+
+    .apt-footer-main {
+        padding: 40px 0 34px;
+    }
+
+    .apt-footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 22px;
+    }
+
+    .apt-footer-about-column,
+    .apt-footer-contact-column {
+        grid-column: 1 / -1;
+    }
+
+    .apt-footer-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .apt-footer-info-inner {
+        grid-template-columns: 1fr;
+        padding: 9px 0;
+    }
+
+    .apt-footer-info-item {
+        padding: 11px 0;
+
+        justify-content: flex-start;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--apt-line);
+    }
+
+    .apt-footer-info-item:last-child {
+        border-bottom: 0;
+    }
+
+    .apt-footer-bottom-inner {
+        min-height: auto;
+        padding: 16px 0;
+
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .apt-footer-legal {
+        justify-content: flex-start;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .apt-footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .apt-footer-about-column,
+    .apt-footer-contact-column {
+        grid-column: auto;
+    }
+
+}
+</style>
+<!-- /wp:html -->
+
+
+<!-- wp:group {"className":"apt-footer","layout":{"type":"default"}} -->
+<div class="wp-block-group apt-footer">
+
+
+<!-- MAIN FOOTER -->
+<!-- wp:group {"className":"apt-footer-main","layout":{"type":"default"}} -->
+<div class="wp-block-group apt-footer-main">
+
+
+<!-- LOGO ROW -->
+<!-- wp:group {"className":"apt-footer-wrap apt-footer-logo-row","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group apt-footer-wrap apt-footer-logo-row">
+<!-- wp:site-logo {"width":235,"shouldSyncIcon":true} /-->
+</div>
+<!-- /wp:group -->
+
+
+<!-- MAIN GRID -->
+<!-- wp:html -->
+<div class="apt-footer-wrap apt-footer-grid">
+
+
+    <!-- ABOUT -->
+    <div class="apt-footer-about-column">
+
+        <p class="apt-footer-about">
+            Auto Parts Trading supplies new and used vehicle parts for cars,
+            vans and commercial customers. Send us your vehicle and part details
+            if you need help sourcing a component.
+        </p>
+
+
+        <div class="apt-footer-badges">
+
+            <span class="apt-footer-badge">
+
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M7 4h10l2 6v9h-2v-2H7v2H5v-9l2-6zm1.5 2L7 10h10l-1.5-4h-7z"/>
+                </svg>
+
+                Cars &amp; Vans
+
+            </span>
+
+
+            <span class="apt-footer-badge">
+
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M2 12 12 2h8a2 2 0 0 1 2 2v8L12 22 2 12zm15-7a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                </svg>
+
+                New &amp; Used
+
+            </span>
+
+
+            <span class="apt-footer-badge">
+
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3 5h11v10H3V5zm12 4h3.4L21 12v3h-6V9z"/>
+                </svg>
+
+                UK Enquiries
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUICK LINKS -->
+    <div>
+
+        <h3 class="apt-footer-heading">Quick Links</h3>
+
+        <ul class="apt-footer-links">
+
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About Us</a></li>
+            <li><a href="/parts-and-services/">Parts &amp; Services</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+            <li><a href="/my-account/">My Account</a></li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- PARTS -->
+    <div>
+
+        <h3 class="apt-footer-heading">Parts</h3>
+
+        <ul class="apt-footer-links">
+
+            <li><a href="/parts-and-services/">Car Parts</a></li>
+            <li><a href="/parts-and-services/">Van Parts</a></li>
+            <li><a href="/parts-and-services/">Engines</a></li>
+            <li><a href="/parts-and-services/">Gearboxes</a></li>
+            <li><a href="/parts-and-services/">Body Parts</a></li>
+            <li><a href="/parts-and-services/">Electrical Parts</a></li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- CONTACT -->
+    <div class="apt-footer-contact-column">
+
+        <h3 class="apt-footer-heading">Get in Touch</h3>
+
+        <div class="apt-footer-contact">
+
+
+            <div class="apt-footer-contact-item">
+
+                <div class="apt-footer-contact-icon">
+
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M6.6 10.8c1.6 3.2 3.4 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.7c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1l-2.2 2.2z"/>
+                    </svg>
+
+                </div>
+
+                <div class="apt-footer-contact-copy">
+
+                    <strong>Phone</strong>
+
+                    <a href="tel:+123456789">
+                        (+1) 23456789
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="apt-footer-contact-item">
+
+                <div class="apt-footer-contact-icon">
+
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M2 5h20v14H2V5zm10 7L4 7v10h16V7l-8 5zm0-2 8-5H4l8 5z"/>
+                    </svg>
+
+                </div>
+
+                <div class="apt-footer-contact-copy">
+
+                    <strong>Email</strong>
+
+                    <a href="mailto:nirav94trivedi@gmail.com">
+                        nirav94trivedi@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="apt-footer-contact-item">
+
+                <div class="apt-footer-contact-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M12 21s7-5.3 7-12a7 7 0 1 0-14 0c0 6.7 7 12 7 12z"/>
+                        <circle cx="12" cy="9" r="2.2"/>
+                    </svg>
+
+                </div>
+
+                <div class="apt-footer-contact-copy">
+
+                    <strong>Service Area</strong>
+
+                    <span>United Kingdom</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+<!-- /wp:html -->
+
+
+</div>
+<!-- /wp:group -->
+
+
+<!-- INFO STRIP -->
+<!-- wp:html -->
+<section class="apt-footer-info">
+
+    <div class="apt-footer-wrap apt-footer-info-inner">
+
+
+        <div class="apt-footer-info-item">
+
+            <div class="apt-footer-info-icon">
+
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2 4 5v6c0 5.2 3.4 9.8 8 11 4.6-1.2 8-5.8 8-11V5l-8-3zm0 4v12c-2.8-1.2-5-4.3-5-7V7l5-1z"/>
+                </svg>
+
+            </div>
+
+            <div class="apt-footer-info-copy">
+
+                <strong>New &amp; Used Parts</strong>
+
+                <span>
+                    Vehicle components across multiple categories
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="apt-footer-info-item">
+
+            <div class="apt-footer-info-icon">
+
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M7 4h10l2 6v9h-2v-2H7v2H5v-9l2-6zm1.5 2L7 10h10l-1.5-4h-7z"/>
+                </svg>
+
+            </div>
+
+            <div class="apt-footer-info-copy">
+
+                <strong>Vehicle-Based Enquiries</strong>
+
+                <span>
+                    Send registration and part information
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="apt-footer-info-item">
+
+            <div class="apt-footer-info-icon">
+
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M4 14v-2a8 8 0 0 1 16 0v2"/>
+                    <path d="M4 14H2v5h4v-5H4zm16 0h2v5h-4v-5h2z"/>
+                </svg>
+
+            </div>
+
+            <div class="apt-footer-info-copy">
+
+                <strong>Customer &amp; Trade Enquiries</strong>
+
+                <span>
+                    For drivers, garages and businesses
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- COPYRIGHT -->
+<section class="apt-footer-bottom">
+
+    <div class="apt-footer-wrap apt-footer-bottom-inner">
+
+        <p class="apt-footer-copyright">
+            © 2026 Auto Parts Trading. All rights reserved.
+        </p>
+
+
+        <div class="apt-footer-legal">
+
+            <a href="/privacy-policy/">Privacy Policy</a>
+            <a href="/terms-and-conditions/">Terms &amp; Conditions</a>
+            <a href="/returns-policy/">Returns Policy</a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- /wp:html -->
+
+
+</div>
+<!-- /wp:group -->

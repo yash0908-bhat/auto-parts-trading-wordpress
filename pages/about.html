@@ -1,0 +1,1597 @@
+<!-- wp:html -->
+<style>
+/* =========================================================
+   AUTO PARTS TRADING — COMPLETE ABOUT US PAGE
+   Scoped to .apt-about-page
+   Header and footer remain separate template parts
+   ========================================================= */
+
+.apt-about-page,
+.apt-about-page * {
+    box-sizing: border-box;
+}
+
+.apt-about-page {
+    --apt-red: #e10600;
+    --apt-red-dark: #b90400;
+    --apt-dark: #171c21;
+    --apt-dark-2: #222a30;
+    --apt-text: #4e565d;
+    --apt-muted: #778087;
+    --apt-line: #e1e5e8;
+    --apt-soft: #f5f6f7;
+
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0 0 0 calc(50% - 50vw) !important;
+    padding: 0 !important;
+    overflow-x: hidden;
+
+    background: #fff;
+    color: var(--apt-dark);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.apt-about-page h1,
+.apt-about-page h2,
+.apt-about-page h3,
+.apt-about-page p,
+.apt-about-page figure {
+    margin-top: 0;
+}
+
+.apt-about-page a {
+    text-decoration: none;
+}
+
+.apt-about-page img {
+    display: block;
+    max-width: 100%;
+}
+
+.apt-about-wrap {
+    width: min(1320px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.apt-about-section {
+    padding: 76px 0;
+}
+
+.apt-about-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 12px;
+
+    color: var(--apt-red);
+
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+}
+
+.apt-about-kicker::before {
+    content: "";
+    width: 26px;
+    height: 3px;
+    border-radius: 99px;
+    background: var(--apt-red);
+}
+
+.apt-about-title {
+    margin-bottom: 12px;
+
+    color: var(--apt-dark);
+
+    font-size: clamp(30px, 3vw, 44px);
+    line-height: 1.08;
+    letter-spacing: -1.2px;
+    font-weight: 900;
+}
+
+.apt-about-intro {
+    max-width: 760px;
+    margin-bottom: 0;
+
+    color: var(--apt-text);
+
+    font-size: 16px;
+    line-height: 1.72;
+}
+
+.apt-about-button {
+    min-height: 49px;
+    padding: 0 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 2px solid transparent;
+    border-radius: 5px;
+
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .3px;
+
+    transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+
+.apt-about-button:hover {
+    transform: translateY(-1px);
+}
+
+.apt-about-button-red {
+    background: var(--apt-red);
+    border-color: var(--apt-red);
+    color: #fff !important;
+}
+
+.apt-about-button-red:hover {
+    background: var(--apt-red-dark);
+    border-color: var(--apt-red-dark);
+}
+
+.apt-about-button-outline {
+    border-color: var(--apt-dark);
+    color: var(--apt-dark) !important;
+}
+
+.apt-about-button-outline:hover {
+    background: var(--apt-dark);
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   1. HERO
+   ========================================================= */
+
+.apt-about-hero {
+    position: relative;
+    isolation: isolate;
+
+    min-height: 390px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(17,22,26,.97) 0%,
+            rgba(17,22,26,.91) 45%,
+            rgba(17,22,26,.59) 72%,
+            rgba(17,22,26,.24) 100%
+        ),
+        url("https://images.unsplash.com/photo-1515923161732-93f9a4b39e2b?fit=crop&w=1800&q=88")
+        center/cover no-repeat;
+}
+
+.apt-about-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        radial-gradient(circle at 78% 48%, rgba(225,6,0,.17), transparent 28%);
+}
+
+.apt-about-hero-inner {
+    width: min(1320px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 68px 0;
+}
+
+.apt-about-breadcrumb {
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    color: rgba(255,255,255,.62);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.apt-about-breadcrumb a {
+    color: rgba(255,255,255,.82) !important;
+}
+
+.apt-about-breadcrumb span {
+    color: var(--apt-red);
+}
+
+.apt-about-hero h1 {
+    max-width: 770px;
+    margin-bottom: 17px;
+
+    color: #fff;
+
+    font-size: clamp(43px, 5vw, 68px);
+    line-height: .99;
+    letter-spacing: -2px;
+    font-weight: 900;
+}
+
+.apt-about-hero h1 span {
+    color: #ff1c16;
+}
+
+.apt-about-hero p {
+    max-width: 700px;
+    margin-bottom: 0;
+
+    color: rgba(255,255,255,.80);
+
+    font-size: 16px;
+    line-height: 1.72;
+}
+
+
+/* =========================================================
+   2. WHO WE ARE
+   ========================================================= */
+
+.apt-about-story {
+    background: #fff;
+}
+
+.apt-about-story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 52px;
+    align-items: center;
+}
+
+.apt-about-story-image {
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+
+    border-radius: 9px;
+}
+
+.apt-about-story-image img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.apt-about-story-badge {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+
+    max-width: 330px;
+    padding: 18px 20px;
+
+    border-left: 4px solid var(--apt-red);
+
+    background: rgba(23,28,33,.94);
+    color: #fff;
+}
+
+.apt-about-story-badge strong {
+    display: block;
+    margin-bottom: 4px;
+
+    font-size: 16px;
+}
+
+.apt-about-story-badge span {
+    color: rgba(255,255,255,.72);
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.apt-about-story-copy p {
+    margin-bottom: 17px;
+
+    color: var(--apt-text);
+
+    font-size: 14px;
+    line-height: 1.76;
+}
+
+.apt-about-story-actions {
+    margin-top: 26px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* =========================================================
+   3. WHAT WE DO
+   ========================================================= */
+
+.apt-about-do {
+    background: var(--apt-soft);
+}
+
+.apt-about-do-grid {
+    margin-top: 32px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.apt-about-do-card {
+    padding: 25px 22px;
+
+    border: 1px solid var(--apt-line);
+    border-radius: 8px;
+
+    background: #fff;
+
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.apt-about-do-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0,0,0,.07);
+}
+
+.apt-about-do-icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #fff0ef;
+    color: var(--apt-red);
+}
+
+.apt-about-do-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.apt-about-do-card h3 {
+    margin-bottom: 7px;
+
+    color: var(--apt-dark);
+
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.apt-about-do-card p {
+    margin-bottom: 0;
+
+    color: var(--apt-muted);
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   4. WHO WE HELP
+   ========================================================= */
+
+.apt-about-help-grid {
+    display: grid;
+    grid-template-columns: .86fr 1.14fr;
+    gap: 54px;
+    align-items: center;
+}
+
+.apt-about-help-list {
+    display: grid;
+    gap: 13px;
+}
+
+.apt-about-help-item {
+    padding: 18px 19px;
+
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 14px;
+    align-items: center;
+
+    border: 1px solid var(--apt-line);
+    border-radius: 7px;
+
+    background: #fff;
+}
+
+.apt-about-help-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    background: var(--apt-dark);
+    color: #fff;
+}
+
+.apt-about-help-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.apt-about-help-item strong {
+    display: block;
+    margin-bottom: 3px;
+
+    color: var(--apt-dark);
+
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.apt-about-help-item span {
+    display: block;
+
+    color: var(--apt-muted);
+
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+.apt-about-help-photo {
+    min-height: 485px;
+    overflow: hidden;
+
+    border-radius: 9px;
+}
+
+.apt-about-help-photo img {
+    width: 100%;
+    height: 485px;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   5. VALUES / PRINCIPLES
+   ========================================================= */
+
+.apt-about-values {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg, rgba(19,24,28,.98), rgba(19,24,28,.92)),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?fit=crop&w=1800&q=86")
+        center/cover no-repeat;
+}
+
+.apt-about-values .apt-about-kicker,
+.apt-about-values .apt-about-title {
+    color: #fff;
+}
+
+.apt-about-values .apt-about-intro {
+    color: rgba(255,255,255,.72);
+}
+
+.apt-about-values-grid {
+    margin-top: 32px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.apt-about-value-card {
+    padding: 26px;
+
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 8px;
+
+    background: rgba(255,255,255,.045);
+    backdrop-filter: blur(3px);
+}
+
+.apt-about-value-number {
+    margin-bottom: 14px;
+
+    color: var(--apt-red);
+
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.apt-about-value-card h3 {
+    margin-bottom: 8px;
+
+    color: #fff;
+
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.apt-about-value-card p {
+    margin-bottom: 0;
+
+    color: rgba(255,255,255,.70);
+
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   6. HOW WE APPROACH PART SOURCING
+   ========================================================= */
+
+.apt-about-process {
+    background: #fff;
+}
+
+.apt-about-process-grid {
+    margin-top: 34px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.apt-about-process-card {
+    position: relative;
+
+    padding: 25px 22px;
+
+    border: 1px solid var(--apt-line);
+    border-radius: 8px;
+
+    background: #fff;
+}
+
+.apt-about-process-card::after {
+    content: "";
+
+    position: absolute;
+    top: 38px;
+    right: -17px;
+
+    width: 18px;
+    height: 2px;
+
+    background: #cbd0d4;
+}
+
+.apt-about-process-card:last-child::after {
+    display: none;
+}
+
+.apt-about-process-number {
+    width: 37px;
+    height: 37px;
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--apt-red);
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.apt-about-process-card h3 {
+    margin-bottom: 7px;
+
+    color: var(--apt-dark);
+
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.apt-about-process-card p {
+    margin-bottom: 0;
+
+    color: var(--apt-muted);
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   7. PARTS RANGE
+   ========================================================= */
+
+.apt-about-range {
+    background: var(--apt-soft);
+}
+
+.apt-about-range-grid {
+    margin-top: 32px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.apt-about-range-card {
+    min-height: 118px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    border: 1px solid var(--apt-line);
+    border-radius: 7px;
+
+    background: #fff;
+}
+
+.apt-about-range-icon {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #fff0ef;
+    color: var(--apt-red);
+}
+
+.apt-about-range-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+.apt-about-range-card strong {
+    display: block;
+    margin-bottom: 4px;
+
+    color: var(--apt-dark);
+
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.apt-about-range-card span {
+    display: block;
+
+    color: var(--apt-muted);
+
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   8. FINAL CTA
+   ========================================================= */
+
+.apt-about-final {
+    padding: 60px 0;
+
+    background: var(--apt-red);
+}
+
+.apt-about-final-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 34px;
+    align-items: center;
+}
+
+.apt-about-final h2 {
+    margin-bottom: 8px;
+
+    color: #fff;
+
+    font-size: clamp(27px, 3vw, 40px);
+    line-height: 1.08;
+    letter-spacing: -1px;
+    font-weight: 900;
+}
+
+.apt-about-final p {
+    max-width: 760px;
+    margin-bottom: 0;
+
+    color: rgba(255,255,255,.80);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.apt-about-final-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.apt-about-final .apt-about-button-outline {
+    border-color: #fff;
+    color: #fff !important;
+}
+
+.apt-about-final .apt-about-button-outline:hover {
+    background: #fff;
+    color: var(--apt-dark) !important;
+}
+
+.apt-about-final .apt-about-button-red {
+    background: var(--apt-dark);
+    border-color: var(--apt-dark);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .apt-about-story-grid,
+    .apt-about-help-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .apt-about-do-grid,
+    .apt-about-process-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .apt-about-values-grid,
+    .apt-about-range-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .apt-about-process-card::after {
+        display: none;
+    }
+
+    .apt-about-story-image,
+    .apt-about-help-photo,
+    .apt-about-help-photo img {
+        min-height: 410px;
+        height: 410px;
+    }
+
+    .apt-about-final-inner {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .apt-about-wrap,
+    .apt-about-hero-inner {
+        width: calc(100% - 30px);
+    }
+
+    .apt-about-section {
+        padding: 54px 0;
+    }
+
+    .apt-about-hero {
+        min-height: 330px;
+    }
+
+    .apt-about-hero-inner {
+        padding: 52px 0;
+    }
+
+    .apt-about-hero h1 {
+        font-size: 43px;
+        letter-spacing: -1.4px;
+    }
+
+    .apt-about-do-grid,
+    .apt-about-values-grid,
+    .apt-about-process-grid,
+    .apt-about-range-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .apt-about-story-image,
+    .apt-about-help-photo,
+    .apt-about-help-photo img {
+        min-height: 330px;
+        height: 330px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .apt-about-hero h1 {
+        font-size: 37px;
+    }
+
+    .apt-about-story-actions,
+    .apt-about-final-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .apt-about-button {
+        width: 100%;
+    }
+
+}
+</style>
+
+
+<div class="apt-about-page">
+
+
+<!-- ======================================================
+     HERO
+     ====================================================== -->
+
+<section class="apt-about-hero">
+
+    <div class="apt-about-hero-inner">
+
+        <div class="apt-about-breadcrumb">
+
+            <a href="/">Home</a>
+
+            <span>›</span>
+
+            About Us
+
+        </div>
+
+
+        <h1>
+            Vehicle Parts Sourcing.<br>
+            <span>Kept Simple.</span>
+        </h1>
+
+
+        <p>
+            Auto Parts Trading is focused on helping drivers, garages and businesses
+            source new and used automotive components through a straightforward
+            enquiry-led service.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     WHO WE ARE
+     ====================================================== -->
+
+<section class="apt-about-section apt-about-story">
+
+    <div class="apt-about-wrap apt-about-story-grid">
+
+
+        <div class="apt-about-story-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?fit=crop&w=1200&q=87"
+                alt="Automotive workshop and vehicle service environment"
+                loading="lazy">
+
+            <div class="apt-about-story-badge">
+
+                <strong>Auto Parts Trading</strong>
+
+                <span>
+                    New and used vehicle parts for customer and trade enquiries.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="apt-about-story-copy">
+
+            <div class="apt-about-kicker">
+                Who we are
+            </div>
+
+            <h2 class="apt-about-title">
+                A Practical Route to the Parts You Need
+            </h2>
+
+            <p>
+                Auto Parts Trading is built around a simple idea: customers should be able
+                to explain what vehicle they have, what component they need and receive a
+                clear route for discussing the right part.
+            </p>
+
+            <p>
+                The business covers new and used automotive components across multiple
+                categories, including engines, gearboxes, body parts, electrical parts
+                and other vehicle components.
+            </p>
+
+            <p>
+                We also welcome enquiries from garages, businesses and sellers with
+                automotive stock, helping make the website useful for both customer
+                sourcing and trade conversations.
+            </p>
+
+
+            <div class="apt-about-story-actions">
+
+                <a href="/parts-and-services/" class="apt-about-button apt-about-button-red">
+                    VIEW PARTS &amp; SERVICES
+                </a>
+
+                <a href="/contact/" class="apt-about-button apt-about-button-outline">
+                    CONTACT US
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     WHAT WE DO
+     ====================================================== -->
+
+<section class="apt-about-section apt-about-do">
+
+    <div class="apt-about-wrap">
+
+        <div class="apt-about-kicker">
+            What we do
+        </div>
+
+        <h2 class="apt-about-title">
+            Supporting Different Automotive Parts Needs
+        </h2>
+
+        <p class="apt-about-intro">
+            The site is designed to make it easy to browse key categories,
+            send a detailed parts request and start a direct enquiry when
+            the exact component is not already listed.
+        </p>
+
+
+        <div class="apt-about-do-grid">
+
+
+            <div class="apt-about-do-card">
+
+                <div class="apt-about-do-icon">
+
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M7 4h10l2 6v9h-2v-2H7v2H5v-9l2-6zm1.5 2L7 10h10l-1.5-4h-7z"/>
+                    </svg>
+
+                </div>
+
+                <h3>Vehicle Parts</h3>
+
+                <p>
+                    Parts enquiries for cars, vans and other supported vehicle types.
+                </p>
+
+            </div>
+
+
+            <div class="apt-about-do-card">
+
+                <div class="apt-about-do-icon">
+
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M5 5h14v14H5zM8 8v8h8V8H8zm-6 3h3v2H2v-2zm17 0h3v2h-3v-2zM11 2h2v3h-2V2zm0 17h2v3h-2v-3z"/>
+                    </svg>
+
+                </div>
+
+                <h3>Mechanical &amp; Electrical</h3>
+
+                <p>
+                    Major mechanical, powertrain and electrical components.
+                </p>
+
+            </div>
+
+
+            <div class="apt-about-do-card">
+
+                <div class="apt-about-do-icon">
+
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M2 12 12 2h8a2 2 0 0 1 2 2v8L12 22 2 12zm15-7a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                    </svg>
+
+                </div>
+
+                <h3>New &amp; Used Options</h3>
+
+                <p>
+                    Enquiries can cover both new and used components depending on availability.
+                </p>
+
+            </div>
+
+
+            <div class="apt-about-do-card">
+
+                <div class="apt-about-do-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M4 14v-2a8 8 0 0 1 16 0v2"/>
+                        <path d="M4 14H2v5h4v-5H4zm16 0h2v5h-4v-5h2z"/>
+                    </svg>
+
+                </div>
+
+                <h3>Direct Enquiries</h3>
+
+                <p>
+                    Customers can send vehicle and part details when they need help sourcing something specific.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     WHO WE HELP
+     ====================================================== -->
+
+<section class="apt-about-section">
+
+    <div class="apt-about-wrap apt-about-help-grid">
+
+
+        <div>
+
+            <div class="apt-about-kicker">
+                Who we help
+            </div>
+
+            <h2 class="apt-about-title">
+                Built for Drivers, Garages and Businesses
+            </h2>
+
+            <p class="apt-about-intro" style="margin-bottom:27px;">
+                Automotive parts sourcing is not one-size-fits-all. Different customers
+                need different levels of information, quantities and support.
+            </p>
+
+
+            <div class="apt-about-help-list">
+
+
+                <div class="apt-about-help-item">
+
+                    <div class="apt-about-help-icon">
+
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M7 4h10l2 6v9h-2v-2H7v2H5v-9l2-6zm1.5 2L7 10h10l-1.5-4h-7z"/>
+                        </svg>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Drivers &amp; Vehicle Owners</strong>
+
+                        <span>
+                            Looking for replacement components for repair or maintenance.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="apt-about-help-item">
+
+                    <div class="apt-about-help-icon">
+
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.2 2.2-3-3 2.2-2.2z"/>
+                        </svg>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Garages &amp; Repairers</strong>
+
+                        <span>
+                            Trade enquiries for parts required during vehicle repair work.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="apt-about-help-item">
+
+                    <div class="apt-about-help-icon">
+
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M4 4h16v16H4V4zm3 3v10h10V7H7z"/>
+                        </svg>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Businesses</strong>
+
+                        <span>
+                            Automotive and commercial customers with ongoing parts requirements.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="apt-about-help-item">
+
+                    <div class="apt-about-help-icon">
+
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2 2 7l10 5 10-5-10-5zm-8 9v6l8 4 8-4v-6l-8 4-8-4z"/>
+                        </svg>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Parts Sellers</strong>
+
+                        <span>
+                            Businesses or sellers looking to discuss surplus automotive stock.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="apt-about-help-photo">
+
+            <img
+                src="https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?fit=crop&w=1200&q=87"
+                alt="Mechanic working in an automotive workshop"
+                loading="lazy">
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     OUR PRINCIPLES
+     ====================================================== -->
+
+<section class="apt-about-section apt-about-values">
+
+    <div class="apt-about-wrap">
+
+        <div class="apt-about-kicker">
+            Our approach
+        </div>
+
+        <h2 class="apt-about-title">
+            Clear Information Before Guesswork
+        </h2>
+
+        <p class="apt-about-intro">
+            Vehicle parts can vary by model, engine, trim and production year.
+            Our website is therefore structured around collecting useful information
+            first rather than pretending every component is interchangeable.
+        </p>
+
+
+        <div class="apt-about-values-grid">
+
+
+            <div class="apt-about-value-card">
+
+                <div class="apt-about-value-number">
+                    PRINCIPLE 01
+                </div>
+
+                <h3>Start With the Vehicle</h3>
+
+                <p>
+                    Registration, make, model and other relevant vehicle details help make
+                    a parts enquiry more specific.
+                </p>
+
+            </div>
+
+
+            <div class="apt-about-value-card">
+
+                <div class="apt-about-value-number">
+                    PRINCIPLE 02
+                </div>
+
+                <h3>Describe the Part Clearly</h3>
+
+                <p>
+                    Part names, part numbers, photos and condition preferences all help
+                    reduce ambiguity.
+                </p>
+
+            </div>
+
+
+            <div class="apt-about-value-card">
+
+                <div class="apt-about-value-number">
+                    PRINCIPLE 03
+                </div>
+
+                <h3>Keep the Process Straightforward</h3>
+
+                <p>
+                    Customers should be able to browse, enquire and provide the information
+                    needed without navigating an unnecessarily complicated process.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     PROCESS
+     ====================================================== -->
+
+<section class="apt-about-section apt-about-process">
+
+    <div class="apt-about-wrap">
+
+        <div class="apt-about-kicker">
+            How the process works
+        </div>
+
+        <h2 class="apt-about-title">
+            From Vehicle Details to Parts Enquiry
+        </h2>
+
+        <p class="apt-about-intro">
+            The website is designed around a simple four-stage flow.
+        </p>
+
+
+        <div class="apt-about-process-grid">
+
+
+            <div class="apt-about-process-card">
+
+                <div class="apt-about-process-number">
+                    01
+                </div>
+
+                <h3>Identify the Vehicle</h3>
+
+                <p>
+                    Start with the registration, make, model or other identifying details.
+                </p>
+
+            </div>
+
+
+            <div class="apt-about-process-card">
+
+                <div class="apt-about-process-number">
+                    02
+                </div>
+
+                <h3>Explain What You Need</h3>
+
+                <p>
+                    Tell us the component, part number or any useful information you already have.
+                </p>
+
+            </div>
+
+
+            <div class="apt-about-process-card">
+
+                <div class="apt-about-process-number">
+                    03
+                </div>
+
+                <h3>Discuss the Part</h3>
+
+                <p>
+                    Use the enquiry route to clarify the component and relevant details.
+                </p>
+
+            </div>
+
+
+            <div class="apt-about-process-card">
+
+                <div class="apt-about-process-number">
+                    04
+                </div>
+
+                <h3>Confirm Before Ordering</h3>
+
+                <p>
+                    Review the supplied information and compatibility before completing an order.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     PARTS RANGE
+     ====================================================== -->
+
+<section class="apt-about-section apt-about-range">
+
+    <div class="apt-about-wrap">
+
+        <div class="apt-about-kicker">
+            Parts range
+        </div>
+
+        <h2 class="apt-about-title">
+            Key Categories We Cover
+        </h2>
+
+        <p class="apt-about-intro">
+            The exact range can vary, but these are some of the main areas customers
+            can browse or enquire about.
+        </p>
+
+
+        <div class="apt-about-range-grid">
+
+
+            <div class="apt-about-range-card">
+
+                <div class="apt-about-range-icon">
+
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M5 5h14v14H5zM8 8v8h8V8H8z"/>
+                    </svg>
+
+                </div>
+
+                <div>
+
+                    <strong>Engines</strong>
+
+                    <span>Replacement engine and related powertrain enquiries.</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="apt-about-range-card">
+
+                <div class="apt-about-range-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="7" cy="7" r="2"/>
+                        <circle cx="17" cy="17" r="2"/>
+                        <path d="M8.5 8.5 15.5 15.5"/>
+                        <path d="M17 5v8"/>
+                        <path d="M14 8h6"/>
+                    </svg>
+
+                </div>
+
+                <div>
+
+                    <strong>Gearboxes</strong>
+
+                    <span>Transmission and gearbox-related enquiries.</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="apt-about-range-card">
+
+                <div class="apt-about-range-icon">
+
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M7 4h10l2 6v9h-2v-2H7v2H5v-9l2-6zm1.5 2L7 10h10l-1.5-4h-7z"/>
+                    </svg>
+
+                </div>
+
+                <div>
+
+                    <strong>Body Parts</strong>
+
+                    <span>Panels and exterior replacement components.</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="apt-about-range-card">
+
+                <div class="apt-about-range-icon">
+
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M5 5h14v14H5zM8 8v8h8V8H8zm-6 3h3v2H2v-2zm17 0h3v2h-3v-2z"/>
+                    </svg>
+
+                </div>
+
+                <div>
+
+                    <strong>Electrical Parts</strong>
+
+                    <span>Vehicle electrical and electronic component enquiries.</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="apt-about-range-card">
+
+                <div class="apt-about-range-icon">
+
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="12" cy="12" r="8"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+
+                </div>
+
+                <div>
+
+                    <strong>Mechanical Parts</strong>
+
+                    <span>Repair and replacement components across multiple systems.</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="apt-about-range-card">
+
+                <div class="apt-about-range-icon">
+
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 17h-2v-2h2v2zm2.1-7.8-.9.9A3.5 3.5 0 0 0 13 15h-2v-.5a4.6 4.6 0 0 1 1.5-3.4l1.2-1.2a1.8 1.8 0 1 0-3-1.3H8.8a3.7 3.7 0 1 1 6.3 2.6z"/>
+                    </svg>
+
+                </div>
+
+                <div>
+
+                    <strong>Other Components</strong>
+
+                    <span>If you cannot find the category, send us the details directly.</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ======================================================
+     FINAL CTA
+     ====================================================== -->
+
+<section class="apt-about-final">
+
+    <div class="apt-about-wrap apt-about-final-inner">
+
+
+        <div>
+
+            <h2>
+                Looking for a Part?
+            </h2>
+
+            <p>
+                Send us your vehicle details and the component you need,
+                or browse the main parts and services categories.
+            </p>
+
+        </div>
+
+
+        <div class="apt-about-final-actions">
+
+            <a href="/contact/" class="apt-about-button apt-about-button-red">
+                SEND AN ENQUIRY
+            </a>
+
+            <a href="/parts-and-services/" class="apt-about-button apt-about-button-outline">
+                VIEW PARTS
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</div>
+<!-- /wp:html -->
