@@ -35,6 +35,10 @@ The project demonstrates a responsive ecommerce-style website experience built w
 
 ```text
 auto-parts-trading-wordpress/
+├── assets/
+│   └── branding/
+│       ├── auto-parts-trading-logo.png
+│       └── auto-parts-branding-guide.png
 ├── components/
 │   ├── header.html
 │   └── footer.html
@@ -78,9 +82,20 @@ See [`docs/wordpress-setup.md`](docs/wordpress-setup.md) for more detail.
 | `pages/about.html` | About Us page |
 | `pages/contact.html` | Contact page |
 
+## Brand Assets
+
+The repository includes the original project branding assets used during the build:
+
+- `assets/branding/auto-parts-trading-logo.png` — transparent high-resolution logo
+- `assets/branding/auto-parts-branding-guide.png` — visual logo/brand reference sheet
+
+The WordPress header intentionally uses the native `wp:site-logo` block rather than hard-coding an image path. Upload `auto-parts-trading-logo.png` to WordPress and assign it as the Site Logo.
+
+Most interface icons are inline SVGs embedded directly in the HTML source. Automotive photography used by the page designs is referenced from external Unsplash URLs rather than redistributed as local project assets; see `docs/external-assets.md`.
+
 ## Screenshots
 
-Portfolio screenshots can be added to `docs/screenshots/`. Recommended captures:
+Design/reference screenshots are included in `docs/screenshots/`, and additional live-site captures can be added later. Recommended captures:
 
 - Desktop homepage
 - Mobile homepage

@@ -2,6 +2,10 @@
 
 This repository contains Gutenberg/Site Editor source snippets rather than a complete installable theme.
 
+## Site Logo
+
+Upload `assets/branding/auto-parts-trading-logo.png` to the WordPress Media Library and set it as the global Site Logo. The header source uses the native `wp:site-logo` block, so the logo is intentionally not hard-coded into `header.html`.
+
 ## Header and Footer
 
 Use the Site Editor template-part code editor to place:
